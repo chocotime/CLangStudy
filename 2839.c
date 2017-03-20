@@ -11,8 +11,12 @@ int main(void) {
         
         if(rem>N) 
           printf("-1\n");
-        else if(rem==N)
-          printf("%d\n", rem/3);
+        else if(rem==N) {
+          if(rem%3!=0) 
+              printf("-1\n");
+          else 
+              printf("%d\n", rem/3);
+        }
         else
           printf("%d\n", (N-rem)/5+rem/3);
     }
